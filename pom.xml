@@ -1,11 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
   <modelVersion>4.0.0</modelVersion>
-  <parent>
-    <artifactId>maven-parent-pom</artifactId>
-    <groupId>org.exoplatform</groupId>
-    <version>16</version>
-  </parent>
   <groupId>org.exoplatform.swf.sandbox</groupId>
   <artifactId>maven-sandbox-project</artifactId>
   <version>3.0.x-SNAPSHOT</version>
@@ -13,76 +8,4 @@
   <packaging>pom</packaging>
   <name>Maven sandbox project</name>
   <description>Sample to release a project with GitHub, Maven, Nexus and a staging repository.</description>
-  <modules>
-    <module>maven-sandbox-project-components</module>
-    <module>maven-sandbox-project-primary-source</module>
-    <module>maven-sandbox-project-servlets</module>
-    <module>maven-sandbox-project-ejbs</module>
-    <module>maven-sandbox-project-ear</module>
-  </modules>
-  <scm>
-    <connection>scm:git:git://github.com/exoplatform/maven-sandbox-project.git</connection>
-    <developerConnection>scm:git:git@github.com:exoplatform/maven-sandbox-project.git</developerConnection>
-    <tag>HEAD</tag>
-    <url>https://github.com/exoplatform/maven-sandbox-project</url>
-  </scm>
-  <properties>
-    <!-- **************************************** -->
-    <!-- Jira Settings                            -->
-    <!-- **************************************** -->
-    <jira.project.key>SWF</jira.project.key>
-    <!-- **************************************** -->
-    <!-- Jenkins Settings                         -->
-    <!-- **************************************** -->
-    <jenkins.job.name>maven-sandbox-project-ci</jenkins.job.name>
-    <org.gatein.portal.version>4.4.x-PLF-SNAPSHOT</org.gatein.portal.version>
-    <!-- Platform Project Dependencies -->
-    <org.exoplatform.commons.version>4.4.x-SNAPSHOT</org.exoplatform.commons.version>
-    <org.exoplatform.ecms.version>4.4.x-SNAPSHOT</org.exoplatform.ecms.version>
-    <org.exoplatform.social.version>4.4.x-SNAPSHOT</org.exoplatform.social.version>
-    <org.exoplatform.forum.version>4.4.x-SNAPSHOT</org.exoplatform.forum.version>
-    <org.exoplatform.wiki.version>4.4.x-SNAPSHOT</org.exoplatform.wiki.version>
-    <org.exoplatform.calendar.version>4.4.x-SNAPSHOT</org.exoplatform.calendar.version>
-    <org.exoplatform.integ.version>4.4.x-SNAPSHOT</org.exoplatform.integ.version>
-    <org.exoplatform.platform-ui.version>4.4.x-SNAPSHOT</org.exoplatform.platform-ui.version>
-  </properties>
-  <dependencyManagement>
-    <dependencies>
-      <dependency>
-        <?test that a processing instruction is respected by maven release plugin?>
-        <groupId>${project.groupId}</groupId>
-        <artifactId>maven-sandbox-project-component-logging</artifactId>
-        <version>${project.version}</version>
-      </dependency>
-      <dependency>
-        <groupId>${project.groupId}</groupId>
-        <artifactId>maven-sandbox-project-primary-source</artifactId>
-        <version>${project.version}</version>
-      </dependency>
-      <dependency>
-        <groupId>${project.groupId}</groupId>
-        <artifactId>maven-sandbox-project-servlet</artifactId>
-        <version>${project.version}</version>
-        <type>war</type>
-      </dependency>
-      <dependency>
-        <groupId>${project.groupId}</groupId>
-        <artifactId>maven-sandbox-project-ejbs</artifactId>
-        <version>${project.version}</version>
-        <type>ejb</type>
-      </dependency>
-      <dependency>
-        <groupId>junit</groupId>
-        <artifactId>junit</artifactId>
-        <version>4.10</version>
-      </dependency>
-    </dependencies>
-  </dependencyManagement>
-  <dependencies>
-    <dependency>
-      <groupId>junit</groupId>
-      <artifactId>junit</artifactId>
-      <scope>test</scope>
-    </dependency>
-  </dependencies>
 </project>
