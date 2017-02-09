@@ -5,7 +5,7 @@
   <artifactId>maven-sandbox-project</artifactId>
   <version>3.0.x-SNAPSHOT</version>
   
-  <packaging>poma</packaging>
+  <packaging>pom</packaging>
   <name>Maven sandbox project</name>
   <description>Sample to release a project with GitHub, Maven, Nexus and a staging repository.</description>
 </project>
